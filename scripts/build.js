@@ -5,6 +5,7 @@
 
 const tasks = require('./tasks')
 
+if (!process.env.TARGET_GEN_DIR) process.env.TARGET_GEN_DIR = __dirname + "/../build"
 const buildDir = process.env.TARGET_GEN_DIR
 
 tasks.replaceWebpack()
